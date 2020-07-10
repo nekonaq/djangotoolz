@@ -1,10 +1,16 @@
 import email.parser
 from django.core import mail
-from django.core.mail.message import (     # noqa: F401
+from django.core.mail.message import (
     utf8_charset,                          # utf-8, base64
     utf8_charset_qp,                       # utf-8, quoted pritable
 )
 from django.template.loader import render_to_string
+
+__all__ = (
+    'utf8_charset',
+    'utf8_charset_qp',
+    'EmailTemplated',
+)
 
 
 class EmailTemplated(mail.EmailMultiAlternatives):
