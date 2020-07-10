@@ -5,7 +5,7 @@ import re
 import os
 
 version = re.search("__version__ = '([^']+)'", open(
-    os.path.join(os.path.dirname(__file__), 'djangoexpack/version.py')
+    os.path.join(os.path.dirname(__file__), 'djangoexpack/base/__init__.py')
 ).read().strip()).group(1)
 
 setup(
