@@ -3,7 +3,7 @@ from pyhiera import Hiera
 
 
 def detect_settings_module(base_dir):
-    envpath = os.path.realpath(os.path.join(base_dir, 'secrets/environment'))
+    envpath = os.path.realpath(os.path.join(base_dir, 'secrets/environments/default'))
     app_environ = os.path.basename(envpath) if os.path.exists(envpath) else 'local'
     return 'siteconf.settings.{}'.format(app_environ)
 
