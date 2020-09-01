@@ -38,9 +38,11 @@ def parse_timestamp(timestamp):
     """
     return dateutil.parser.parse(timestamp, tzinfos=TZINFOS)
 
+
 month_re = re.compile(
     r'(?P<year>\d{4})-(?P<month>\d{1,2})$'
 )
+
 
 def parse_month(value):
     """ 文字列を解析して日付 (datetime.date) を返す。
