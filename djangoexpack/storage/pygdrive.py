@@ -116,4 +116,6 @@ class GoogleDriveStorage(Storage):
         )
 
     def _save(self, name, content):
+        if self.exists(name):
+            self.delete(name)
         return self.files_api.upload(self.path(name), content)
