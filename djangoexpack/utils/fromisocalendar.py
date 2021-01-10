@@ -38,8 +38,7 @@ def fromisocalendar(year, week, day):
             # Thursday and leap years starting on a Wednesday
             # first_weekday = _ymd2ord(year, 1, 1) % 7
             first_weekday = datetime.datetime(year, 1, 1).toordinal() % 7
-            if (first_weekday == 4 or (first_weekday == 3 and
-                                       _is_leap(year))):
+            if (first_weekday == 4 or (first_weekday == 3 and _is_leap(year))):
                 out_of_range = False
 
         if out_of_range:
